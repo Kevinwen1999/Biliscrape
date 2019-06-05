@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://d3js.org/d3.v5.js"></script>
+        <script src="script.js"></script>   
+        <title>BiliScraper</title>
+        <h2>BiliScraper</h2>
+    </header>
+    
+    <body>
+        <form action="http://localhost:3000/search" method="post" target="_blank" 
+           onsubmit="Search(); return false;" id="query_form" autocomplete="off">
+            <fieldset>
+                <legend>Type your search query below:</legend>
+                <input type="text" name="query" id="client_input"><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+        
+        <p id="result_title"></p>
+        
+        <table id="result_table">
+            <tr id="table_title">
+                <th>Title</th>
+                <th>Link</th>
+            </tr>
+        </table>
+    </body>
+</html>
